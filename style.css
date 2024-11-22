@@ -1,0 +1,503 @@
+/* ESTILO GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Coda:wght@400;800&family=Recursive:wght@300..1000&family=Righteous&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: rgb(184, 108, 255);
+    --cor-segundaria: rgb(14, 17, 22);
+    --cor-main: rgb(18, 25, 39);
+}
+
+body {
+    background-color: var(--cor-main);
+    color: white;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Coda", system-ui;
+    letter-spacing: 3px;
+    margin-bottom: 4rem;
+}
+main p{
+    font-family: "Coda", system-ui;
+}
+/* ESTILO DO HEADER */
+
+header {
+    background-color: var(--cor-segundaria);
+    /* Cor de fundo do cabeçalho */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+
+    position: sticky;
+    top: 0;
+    width: 100%; /* Largura total */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.interface-header {
+    display: flex;
+    /* Ativa o modelo Flexbox */
+    align-items: center;
+    /* Alinha itens verticalmente ao centro */
+    justify-content: space-between;
+    /* Espaça os itens ao longo da linha */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 60px;
+    /* Altura do logotipo */
+    width: 38px;
+    justify-content: right;
+}
+
+.menu-desktop ul {
+    list-style: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o padding padrão */
+    margin: 0;
+    /* Remove a margem padrão */
+    display: flex;
+    /* Alinha os itens da lista em linha */
+    gap: 10px;
+}
+
+.menu-desktop li {
+    margin-left: 20px;
+    /* Espaçamento entre os itens do menu */
+    font-size: 15px;
+    padding: 3px 8px;
+    background-color: transparent;
+}
+
+.menu-desktop a {
+    color: white;
+    /* Cor do texto dos links */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    padding: 10px;
+    /* Espaçamento interno dos links */
+    font-family: "Chakra Petch", serif;
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.menu-desktop a:hover {
+    border: 1px solid var(--cor-principal);
+    border-radius: 18px; /* Bordas arredondadas */
+}
+
+/* estilo do main */
+
+#topo-site {
+    padding: 100px 4%;
+    height: 91vh;
+}
+
+.interface-topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-topo-site {
+    font-size: 2.5rem;
+    padding: 0 50px;
+
+}
+
+.txt-topo-site h1 {
+    font-family: "Chakra Petch", serif;
+    padding-bottom: 45px;
+    line-height: 60px;
+}
+
+.txt-topo-site p {
+    font-family: "Coda", system-ui;
+    line-height: 45px;
+}
+
+.txt-topo-site span {
+    color: var(--cor-principal);
+}
+
+.botao-contato {
+    font-size: 20px; /* Tamanho da fonte do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin-top: 45px;
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 2px 4px 3px black;
+    background-color: var(--cor-principal); /* Cor de fundo */
+    font-family: "Recursive", sans-serif; /* Fonte */
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    position: relative; 
+    animation: flutuar 2s ease-in-out infinite alternate;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+.botao-contato a{
+    text-decoration: none;  /*sem linha para o link */
+    color: white; /* Cor do texto */
+}
+.botao-contato:hover {
+    background-color: rgba(184, 108, 255, 0.8); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão ao passar o mouse */
+}
+.botao-contato:active {
+    transform: scale(0.95); /* Diminui levemente o botão ao clicar */
+}
+
+
+.nome {
+    width: 300px;
+}
+
+.pessoa {
+   
+    border-radius: 100%;
+    max-width: 100%; /* Imagem responsiva */
+    height: auto; /* Mantém a proporção */
+}
+
+.pessoa-div {
+    border: 5px solid var(--cor-principal);
+    /* sólida e roxa */
+    border-radius: 100%;
+    /* Arredonda os cantos da borda */
+    box-shadow: 2px 2px 10px rgba(227, 133, 255, 0.5);
+    
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 8px;
+    }
+}
+/* estilo das skills */
+.interface-skills{
+    display: flex;
+    padding: 35px 25px;
+    margin: 3rem 22rem;
+    flex-wrap: wrap;
+    gap: 4.2rem;
+    justify-content: center;
+    background-color: var(--cor-segundaria);
+    border-radius: 50px;
+    box-shadow: 2px 4px 8px 1px black;
+     /* box-shadow: 2px 2px 3px var(--cor-principal) */
+}
+/* ESTILO DE SOBRE */
+#sobre {
+    padding: 20px; /* Espaçamento interno da seção */
+    color: white; /* Cor do texto */
+}
+
+.interface-sobre {
+    background-color: var(--cor-segundaria);
+    border-radius: 10px;
+    background-image: url('imgs/back-sobre.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    box-shadow: 2px 2px 3px var(--cor-principal)
+}
+.quem-sou{
+    padding: 20px 105px; 
+    columns: 2;
+    border-radius: 15px;
+
+}
+h3{
+    text-align: center;
+    font-family: "Coda", system-ui;
+    padding: 35px 0px;
+    letter-spacing: 3px;
+    font-weight: 650;
+    text-shadow: -1px -2px 0 #d54cff;
+}
+.txt-sobre {
+    margin-bottom: 25px;
+    padding: 20px; /* Espaçamento interno */
+    background-color: rgba(77, 63, 88, 0.356); /* Cor de fundo com leve transparência */
+    border-radius: 10px ; /* Bordas arredondadas */
+   
+}
+.txt-sobre p{
+    font-size: 1.5rem;
+    line-height: 35px;
+    
+}
+
+
+/* ESTILO DOS PROJETOS */
+section#projetos{
+    margin-top: 45px;
+    padding: 65px 4%;
+    box-shadow: 0 0 40px 10px rgba(102, 60, 255, 0.308);
+}
+div.proj{
+    display: flex;
+    justify-content: space-around;
+}
+.img-proj{
+    width: 360px;
+    height: 460px;
+    border-radius: 15px;
+    background-color: var(--cor-principal);
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    position: relative;
+    box-shadow: 2px 2px 2px 3px rgb(10, 10, 15);
+}
+.img-proj:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 3, 17, 0.226);
+    width: 100%;
+    height: 100%;
+    border:  2px solid var(--cor-principal);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    opacity: 0;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO CONTATO */
+#contato{
+    padding: 25px;
+}
+.interface-contato{
+    background-color: rgb(44, 36, 58);
+    border-radius: 25px;
+    box-shadow: 2px 1px 2px 0px rgb(132, 0, 255);
+    padding: 65px 4%;
+    margin: auto;
+}
+#contato > .titulo{
+    margin: 35px 0 25px 0;
+}
+.contatos{
+    background-color: rgb(90, 90, 102);
+    border-radius: 25px;
+    padding: 10px;
+}
+.contatos h4{
+    font-size: 1.7rem;
+    font-family: "Chakra Petch";
+    padding: 15px 0px 30px 15px;
+}
+.item-contatos{
+    display: flex;
+    margin-bottom: 25px;
+}
+.item-contatos .cont-items{
+    padding: 8px;
+    background-color: var(--cor-principal); 
+    border-radius: 50%;
+    border: 2px solid rgb(221, 203, 255);
+}
+.item-contatos img{
+    width: 25px;
+    margin:auto;
+}
+.item-contatos span{
+    font-size: 1.7rem;
+    padding-left: 15px;
+    padding-top: 4px;
+}
+.redes-sociais{
+    text-align: right;
+    margin-top: 35px;
+}
+.icon{
+    margin: auto;
+    text-decoration: none;
+}
+.icon > i{
+    padding: 10px;
+    margin-right: 25px;
+    background-color: var(--cor-principal);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 35px;
+    transition: 0.5s;
+}
+.icon > i:hover{
+    background-color: rgb(132, 0, 255);
+    transform: scale(1.10); 
+}
+footer{
+    background-color: rgb(67, 4, 126);
+    padding: 55px;
+    margin-top: 10px;
+    text-align: center;
+}
+footer > .redes-sociais .icon > i{
+    background-color: transparent;
+}
+footer > .redes-sociais{
+    text-align: center;
+    margin-bottom: 25px;
+}
+/* BOTAO DO TOPO */
+.btn-topo {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    background-color: var(--cor-principal); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: none; /* Inicialmente escondido */
+    transition: background-color 0.3s; /* Transição suave */
+}
+.btn-topo:hover {
+    background-color: rgb(67, 4, 126); /* Cor ao passar o mouse */
+}
+
+/* Estilo para telas menores */
+@media screen and (max-width: 1030px) {
+    /* cabeçalho */
+    .menu-desktop, .botao-contato{
+        display: none;
+    }
+    /* topo do site */
+    #topo-site {
+        padding: 10px 0%;
+        height: 91vh;
+    }
+    .interface-topo{
+        display: block;  
+    }
+    .txt-topo-site h1{
+        font-size: 2.5rem;
+    }
+    .txt-topo-site .nome{
+        width: 180px;
+    }
+    .txt-topo-site p{
+        font-size: 2rem;
+    }
+    .pessoa-div {
+        width: 250px;
+        height: auto;
+    }
+    /* skills */
+    .interface-skills{
+        margin: 3rem 5rem;
+    }
+    /* SOBRE */
+    #sobre {
+        padding: 10px; /* Espaçamento interno da seção */
+    }
+    .quem-sou{
+        padding: 10px 10px; 
+        columns: 1;
+    }
+    .txt-sobre p{
+        font-size: 1.2rem;
+        line-height: 30px;   
+    }  
+      /* PROJETOS  */
+      div.proj{
+        display: block;   
+    }
+    .img-proj{
+       margin: auto;
+    }
+    /* CONTATO */
+    .interface-contato span, .interface-contato img{
+        font-size: 1rem;  
+    }
+    .redes-sociais i{
+       font-size: 25px;
+    }
+    /* FOOTER */
+    footer{
+        padding: 10px;
+    }
+    footer p{
+        margin-top: 10px;
+    }
+    /* MENU MOBILE */
+    .menu-mobile{
+        background-color: rgb(23, 46, 73);
+        height: 100vh;
+        top: 0;
+        right: 0;
+        position: fixed;
+        width: 0%;
+        z-index: 99999;
+        overflow: hidden;
+    }
+    .menu-mobile.abrir-menu{
+        width: 70%;
+    }
+    .menu-mobile nav ul{
+        text-align: right;
+        list-style: none;
+    }
+    .menu-mobile nav ul li a{
+        color: white;
+        font-size: 35px;
+        font-weight: bolder;
+        padding: 20px;
+        text-decoration: none;    
+        display: block;
+    }
+    .menu-mobile nav.mobile ul li a:hover{
+        background-color: var(--cor-principal);
+    }
+    .menu-mobile .btn-fechar i{
+        font-size: 45px;
+        padding: 10px 5%;       
+    }
+    .btn-abrir-menu i{
+        color: #d54cff;
+        font-size: 40px;
+    }
+    .overlay-menu{
+        background-color: rgba(0, 0, 0, 0.521);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8888;
+        display: none;
+    }
+}
+
+
