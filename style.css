@@ -99,9 +99,9 @@ header {
     border: 1px solid var(--cor-principal);
     border-radius: 18px; /* Bordas arredondadas */
 }
+/* MENU MOBILE SUMIR */
 
 /* estilo do main */
-
 #topo-site {
     padding: 100px 4%;
     height: 91vh;
@@ -415,8 +415,11 @@ footer > .redes-sociais{
         height: auto;
     }
     /* skills */
+    #skills h2{
+        margin-top: 13rem;
+    }
     .interface-skills{
-        margin: 3rem 5rem;
+        margin: 3rem 1rem;
     }
     /* SOBRE */
     #sobre {
@@ -433,9 +436,11 @@ footer > .redes-sociais{
       /* PROJETOS  */
       div.proj{
         display: block;   
+        
     }
     .img-proj{
        margin: auto;
+       width: 290px;
     }
     /* CONTATO */
     .interface-contato span, .interface-contato img{
