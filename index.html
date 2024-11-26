@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
   <!-- BULMA
    LINK PARA COLOCAR NO HEAD
 
@@ -43,7 +42,6 @@
 </header>
   -->
 
-  
   <header>
     <div class="interface-header">
       <a href="#">
@@ -58,25 +56,26 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav> <!--menu-desktop -->
-
-      <div class="btn-abrir-menu" id="btn-abrir-menu">
-        <i class="fa-solid fa-list-ul"></i>
-      </div>
-      <div class="menu-mobile">
-        <div class="btn-fechar">
-          <i class="fa-solid fa-xmark"></i>
-        </div> <!-- BTN FECHAR -->
-        <nav class="mobile">
-        <ul>
-          <li><a href="#topo-site">Início</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-      </div> <!-- MENU MOBILE -->
-      <div class="overlay-menu"></div>
+<!-- menu mobile -->
+      <div class="overlay-menu" id="overlay"></div>
+    <div class="menu-mobile" id="menu">
+        <div class="btn-fechar" id="btn-fechar">
+            <i class="fas fa-times"></i> <!-- Ícone de fechar -->
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#topo-site">Início</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="btn-abrir-menu" id="btn-abrir-menu">
+        <i class="fas fa-bars"></i> <!-- Ícone de abrir menu -->
+    </div>
+    <!-- menu mobile -->
     </div> <!--interface -->
   </header>
 
