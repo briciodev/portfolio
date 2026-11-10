@@ -1435,3 +1435,182 @@ footer .redes-sociais .icon:hover i {
         transition: none;
     }
 }
+                         
+/* =========================
+   CORREÇÕES DE RESPONSIVIDADE
+========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    /* Apresentação */
+    #topo-site {
+        min-height: auto;
+        padding-top: 65px;
+        padding-bottom: 80px;
+    }
+
+    .interface-topo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 45px;
+    }
+
+    .txt-topo-site {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .txt-topo-site h1 {
+        justify-content: center;
+    }
+
+    .txt-topo-site p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pessoa-div {
+        flex-basis: auto;
+        width: clamp(220px, 55vw, 340px);
+    }
+
+    /* Habilidades */
+    .interface-skills {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    /* Sobre */
+    .quem-sou {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 5%;
+    }
+
+    /* Apresentação */
+    #topo-site {
+        padding-top: 55px;
+        padding-bottom: 75px;
+    }
+
+    .interface-topo {
+        gap: 40px;
+    }
+
+    .subtitulo-topo {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+    }
+
+    .txt-topo-site h1 {
+        gap: 8px;
+        font-size: clamp(1.9rem, 8vw, 2.6rem);
+    }
+
+    .nome {
+        width: clamp(135px, 42vw, 190px);
+    }
+
+    .txt-topo-site p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .pessoa-div {
+        width: min(75vw, 280px);
+    }
+
+    .selo-foto {
+        right: -5px;
+        bottom: 20px;
+        padding: 9px 12px;
+        font-size: 0.78rem;
+    }
+
+    /* Skills */
+    .interface-skills {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .skill-item {
+        min-height: 105px;
+        padding: 15px 5px;
+        gap: 10px;
+    }
+
+    .skill-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skill-item span {
+        font-size: 0.78rem;
+    }
+
+    /* Sobre */
+    .interface-sobre {
+        padding: 22px 16px;
+        border-radius: 16px;
+    }
+
+    .sobre-intro {
+        align-items: flex-start;
+        gap: 13px;
+    }
+
+    .sobre-icone {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .txt-sobre {
+        padding: 20px 16px;
+    }
+
+    .txt-sobre p {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    /* Botão voltar ao topo */
+    .btn-topo {
+        right: 15px;
+        bottom: calc(15px + env(safe-area-inset-bottom));
+        display: grid;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        place-items: center;
+        border-radius: 50%;
+        font-size: 1rem;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 360px) {
+
+    .interface-skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .txt-topo-site h1 {
+        font-size: 1.8rem;
+    }
+
+    .nome {
+        width: 130px;
+    }
+
+    .sobre-intro h3 {
+        font-size: 1.25rem;
+    }
+}
