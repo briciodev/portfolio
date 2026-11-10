@@ -1,53 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<!-- fim icons -->
- <link rel="shortcut icon" href="imgs/icon2.png" type="image/x-icon">
+  <meta name="theme-color" content="#0e1116">
+  <meta name="description"
+    content="Portfólio de Fabrício, desenvolvedor web apaixonado por tecnologia, design e inovação.">
+  <title>Fabrício | Desenvolvedor</title>
+
+  <!-- Ícones e tecnologias -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="imgs/icon2.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <title>Fabricio developer</title>
 </head>
 
 <body>
-  <!-- BULMA
-   LINK PARA COLOCAR NO HEAD
-
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
-  <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.i ">
-          <img src="imgs/logotipo.png" alt="" srcset="">
-
-          <img src="imgs/nome-logo.png" alt="" srcset=""> </a>
-
-        <a class="navbar-item">
-          Início
-        </a>
-        <a class="navbar-item">
-          Contatos
-        </a>
-        <a class="navbar-item">
-          Components
-        </a>
-      </div>
-    </nav>
-</header>
-  -->
-
   <header>
     <div class="interface-header">
-      <a href="#">
-        <img src="imgs/logotipo.png" alt="" class="logo">
+      <a href="#topo-site" class="logo-link" aria-label="Voltar ao início">
+        <img src="imgs/logotipo.png" alt="Logotipo de Fabrício" class="logo">
       </a>
-      <nav class="menu-desktop">
+
+      <nav class="menu-desktop" aria-label="Navegação principal">
         <ul>
           <li><a href="#topo-site">Início</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -55,170 +33,395 @@
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
-      </nav> <!--menu-desktop -->
-<!-- menu mobile -->
+      </nav>
+
+      <!-- Menu mobile -->
       <div class="overlay-menu" id="overlay"></div>
-    <div class="menu-mobile" id="menu">
+
+      <div class="menu-mobile" id="menu">
         <div class="btn-fechar" id="btn-fechar">
-            <i class="fas fa-times"></i> <!-- Ícone de fechar -->
+          <i class="fas fa-times" aria-hidden="true"></i>
         </div>
-        <nav>
-            <ul>
-              <li><a href="#topo-site">Início</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#projetos">Projetos</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
+        <nav aria-label="Navegação mobile">
+          <ul>
+            <li><a href="#topo-site">Início</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
         </nav>
+      </div>
+
+      <button class="btn-abrir-menu" id="btn-abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-    <div class="btn-abrir-menu" id="btn-abrir-menu">
-        <i class="fas fa-bars"></i> <!-- Ícone de abrir menu -->
-    </div>
-    <!-- menu mobile -->
-    </div> <!--interface -->
   </header>
 
   <main>
+    <!-- Apresentação -->
     <section id="topo-site">
       <div class="interface-topo">
-
         <div class="txt-topo-site">
-          <h1>Ola me chamo <img src="imgs/nome.png" alt="" class="nome">.</h1>
-          <p>Sou um apaixonado por <span>tecnologia</span> e inovação, gosto da parte criativa e de <span>desenvolver</span> aplicações
-            divertidas<span>.</span></p>
-          <div contatin>
-            <button class="botao-contato"> <a href="#contato">Entre em contato</a></button>
-          </div>
-        </div> <!--txt-topo-site -->
-        <div class="pessoa-div"><img src="imgs/pessoa.jpg" alt="" class="pessoa"></div>
+          <span class="subtitulo-topo">ENGENHEIRO DE SOFTWARE & TECNOLOGIA</span>
+          <h1>Olá, me chamo <img src="imgs/nome.png" alt="Fabrício" class="nome"></h1>
+          <p>Sou apaixonado por <span>tecnologia</span> e inovação. Gosto da parte criativa de <span>desenvolver</span>
+            aplicações interativas e experiências digitais.</p>
+          <a href="#contato" class="botao-contato">Entre em contato <i class="fas fa-arrow-right"
+              aria-hidden="true"></i></a>
+          <a href="#projetos" class="link-projetos">Conheça meus projetos <i class="fas fa-chevron-down"
+              aria-hidden="true"></i></a>
+        </div>
 
-      </div> <!--interface -->
-    </section> <!--topo-site -->
+        <div class="pessoa-div">
+          <img src="imgs/fabri.jpg" alt="Foto de Fabrício Santos" class="pessoa">
+          <span class="selo-foto"><i class="fas fa-code" aria-hidden="true"></i> Desenvolvedor</span>
+        </div>
+      </div>
+      <a href="#skills" class="indicador-scroll" aria-label="Rolar até as habilidades">
+        <i class="fas fa-arrow-down" aria-hidden="true"></i>
+      </a>
+    </section>
 
+    <!-- Habilidades -->
     <section id="skills">
-      <h2 class="titulo">Skills</h2>
+      <div class="secao-cabecalho">
+        <span class="secao-etiqueta">FERRAMENTAS E TECNOLOGIAS</span>
+        <h2 class="titulo">Minhas <span>Skills</span></h2>
+        <p>Tecnologias e ferramentas que fazem parte da minha jornada.</p>
+      </div>
+
       <div class="interface-skills">
-
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="43"
-          alt="html5 logo" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="43"
-          alt="css3 logo" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="43"
-          alt="javascript logo" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="43"
-          alt="typescript logo" />
-        <img src="https://skillicons.dev/icons?i=git" height="43" alt="git logo" />
-        <img src="https://skillicons.dev/icons?i=github" height="43" alt="github logo" />
-        <img src="https://cdn.simpleicons.org/nodedotjs/339933" height="43" alt="nodejs logo" />
-        <img src="https://cdn.simpleicons.org/npm/CB3837" height="43" alt="npm logo" />
-        <img src="https://cdn.simpleicons.org/react/61DAFB" height="43" alt="react logo" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="43"
-          alt="python logo" />
-        <img src="https://skillicons.dev/icons?i=blender" height="43" alt="blender logo" />
-        <img src="https://skillicons.dev/icons?i=bootstrap" height="43" alt="bootstrap logo" />
-        <img src="https://cdn.simpleicons.org/bulma/00D1B2" height="43" alt="bulma logo" />
-        <img src="https://cdn.simpleicons.org/sass/CC6699" height="43" alt="sass logo" />
-        <img src="https://skillicons.dev/icons?i=ps" height="43" alt="adobephotoshop logo" />
-
-      </div> <!-- interface-skills -->
-    </section> <!--skills -->
-   
-    
-    <section id="sobre">
-      <h2 class="titulo">Sobre</h2>
-      <div class="interface-sobre">
-        <h3>Quem sou eu?</h3>
-       <div class="quem-sou">
-        <div class="txt-sobre">
-          <p>Sempre amei criar, desde mais novo quando escrevia historias até na adolescência que ingressei na arte digital, hoje mais velho soube que por meio de códigos poderia criar ferramentas e meios de ajudar as pessoas, resolver problemas ou facilitar processos, Estou sempre em busca de novos desafios e aprendizados, explorando as últimas tendências e ferramentas do mercado. Meu objetivo é contribuir para projetos que façam a diferença e continuar crescendo como profissional na área de desenvolvimento.</p>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML5"><span>HTML5</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS3"><span>CSS3</span></div>
+        <div class="skill-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript"><span>JavaScript</span></div>
+        <div class="skill-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"><span>TypeScript</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><span>Git</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"><span>GitHub</span>
         </div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/nodedotjs/339933"
+            alt="Node.js"><span>Node.js</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/npm/CB3837" alt="NPM"><span>NPM</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><span>React</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python"><span>Python</span></div>
+        <div class="skill-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            alt="Java"><span>Java</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/bootstrap/7952B3"
+            alt="Bootstrap"><span>Bootstrap</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/bulma/00D1B2" alt="Bulma"><span>Bulma</span></div>
+        <div class="skill-item"><img src="https://cdn.simpleicons.org/sass/CC6699" alt="Sass"><span>Sass</span></div>
+        <div class="skill-item"><img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
+            alt="Adobe Photoshop"><span>Photoshop</span></div>
+      </div>
+    </section>
 
-          <div class="txt-sobre">
-            <p>Atuei cerca de 3 anos na área de varejo tendo um bom relacionamento com o público e atendimento ao cliente, além de um ótimo relacionamento interpessoal com colegas de trabalho, esforço e dedicação são meus pontos fortes, mas minhas melhores competências é na área da tecnologia buscando oportunidades que me ajudem a aperfeiçoar meus conhecimentos e minhas hardskills.
-              já trabalhei em projetos para web usando HTML, CSS, JavaScript typeScript além de outras tecnologias como node js e react. </p>
+    <!-- Sobre mim -->
+    <section id="sobre">
+      <div class="secao-cabecalho">
+        <span class="secao-etiqueta">UM POUCO DA MINHA HISTÓRIA</span>
+        <h2 class="titulo">Sobre <span>mim</span></h2>
+      </div>
+
+      <div class="interface-sobre">
+        <div class="sobre-intro">
+          <span class="sobre-icone"><i class="fas fa-user-astronaut" aria-hidden="true"></i></span>
+          <div>
+            <h3>Quem sou eu?</h3>
+            <p>Um pouco da minha trajetória, das minhas experiências e do que me motiva a desenvolver.</p>
           </div>
         </div>
-      </div> <!-- interface-sobre -->
-    </section> <!--sobre -->
+
+        <div class="quem-sou">
+          <article class="txt-sobre">
+            <span class="sobre-numero">01 / CRIATIVIDADE</span>
+            <h4>Transformando ideias em soluções</h4>
+            <p>Sempre fui apaixonado por criar. Desde cedo, quando escrevia histórias, até a adolescência, período em
+              que ingressei na arte digital. Com o tempo, descobri que, por meio da programação, poderia desenvolver
+              ferramentas capazes de ajudar pessoas, resolver problemas e facilitar processos. Estou constantemente em
+              busca de novos desafios e aprendizados, explorando as últimas tendências e tecnologias do mercado. Meu
+              objetivo é contribuir para projetos que façam a diferença e continuar evoluindo como profissional na área
+              de desenvolvimento.</p>
+          </article>
+
+          <article class="txt-sobre">
+            <span class="sobre-numero">02 / EXPERIÊNCIA</span>
+            <h4>Aprendizado e evolução contínua</h4>
+            <p>Atuei por cerca de 5 anos no setor de varejo, adquirindo experiência em atendimento ao público e
+              desenvolvendo um excelente relacionamento interpessoal com colegas de trabalho. Esforço e dedicação são
+              pontos fortes da minha trajetória, mas minhas principais competências estão na área de tecnologia, onde
+              busco oportunidades que me permitam aperfeiçoar meus conhecimentos e aprimorar minhas hard skills. Já
+              participei de projetos para web utilizando HTML, CSS, JavaScript e TypeScript, além de outras tecnologias
+              como Java, Python, Node.js e React.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
 
     <section id="projetos">
       <div class="interface-proj">
-       <h2 class="titulo">Meus projetos</h2>
-       <div class="proj">
-      <div class="img-proj" style="background-image: url(imgs/calc.png);">
-        <div class="overlay">Calculadora JS</div>
-      </div>
-      <div class="img-proj" style="background-image: url(imgs/foca.png);">
-        <div class="overlay">Vida marinha</div>
-      </div>
-      <div class="img-proj" style="background-image: url(imgs/hplove.png);">
-        <div class="overlay">HP Lovecraft</div>
-      </div>
-      </div>  <!-- proj -->
-     
-     </div> <!-- interface-proj -->
-
-    </section>  <!-- projetos -->
-
-    <section id="contato">
-      <h2 class="titulo">Contato</h2>
-      <div class="interface-contato">
-        <div class="contatos">
-          <h4>Entre em contato comigo</h4>
-          <div class="item-contatos">
-            <div class="cont-items">
-              <img src="imgs/enviar.png" alt="gmail" srcset="">
-            </div>  <!-- cont-items --> 
-            <span>fabriciotrabalho100@gmail.com</span>      
-          </div>  <!-- item-contatos -->
-          <div class="item-contatos">
-            <div class="cont-items">
-              <img src="imgs/instagram.png" alt="gmail" srcset="">
-            </div>  <!-- cont-items --> 
-            <span>@fab_code0</span>      
-          </div> 
-          <div class="item-contatos">
-            <div class="cont-items">
-              <img src="imgs/local.png" alt="gmail" srcset="">
-            </div>  <!-- cont-items --> 
-            <span>Fortaleza - CE - Brasil</span>      
-          </div>  <!-- item-contatos -->
+        <div class="secao-cabecalho">
+          <span class="secao-etiqueta">PORTFÓLIO</span>
+          <h2 class="titulo">Meus projetos</h2>
+          <p>Alguns projetos que desenvolvi para praticar minhas habilidades e transformar ideias em aplicações.</p>
         </div>
 
-        <div class="redes-sociais">
-          <a href="https://www.linkedin.com/in/fabr%C3%ADcio-santos-3a468a229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon">
-              <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/briciodev" target="_blank" class="icon">
-              <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.instagram.com/fab_code0?igsh=MTl4cnpmOHd2bnNmaw==" target="_blank" class="icon">
-              <i class="fab fa-instagram"></i>
-          </a>
-      </div>  <!-- redes sociais -->
+        <div class="newcards">
+          <!-- Projeto 1 -->
+          <article class="card">
+            <div class="card-imagem">
+              <img src="imgs/cashHub.png" class="card-img-top" alt="Prévia do projeto CashHub" loading="lazy">
+              <span class="card-categoria">Sistema local</span>
+            </div>
 
-      </div> <!-- interface contato -->
-     
-    </section> <!-- contato -->
- <footer>
-  <p>Portfolio idealizado e desenvolvido inteiramente por mim, ficou interessado? <br> entre em contato comigo pelo email ou instagram</p>
-<div class="redes-sociais">
-  <a href="https://www.linkedin.com/in/fabr%C3%ADcio-santos-3a468a229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon">
-      <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com/briciodev" target="_blank" class="icon">
-      <i class="fab fa-github"></i>
-  </a>
-  <a href="https://www.instagram.com/fab_code0?igsh=MTl4cnpmOHd2bnNmaw==" target="_blank" class="icon">
-      <i class="fab fa-instagram"></i>
-  </a>
-</div>  <!-- redes sociais -->
-<p>© 2024 Copyright</p>
- </footer>
+            <div class="card-body">
+              <span class="projeto-numero">PROJETO 01</span>
+              <h3 class="card-title">CashHub - sistema financeiro</h3>
+              <p class="card-text">aplicação de gerenciamento financeiro pessoal desenvolvida para facilitar o controle
+                de receitas, despesas e organização financeira. visualizar indicadores em um dashboard interativo e
+                obter análises financeiras localmente através do Ollama.</p>
+
+              <div class="tecnologias-projeto"> 
+                <span><i class="devicon-java-plain colored"></i> Java</span>
+                <span><i class="devicon-spring-plain colored"></i> Spring</span>
+                <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                <span><i class="devicon-ollama-plain colored"></i> Ollama</span>
+                <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                <span><i class="devicon-npm-plain colored"></i> npm</span>
+                <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+               
+              </div>
+
+              <div class="projeto-acoes">
+                <a href="https://github.com/briciodev/CashHub" class="btn-projeto" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Ver projeto
+                </a>
+                <a href="https://github.com/briciodev/CashHub" class="btn-projeto btn-projeto-secundario" target="_blank" rel="noopener noreferrer"
+                  aria-label="Ver código-fonte da Calculadora JS">
+                  <i class="fab fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Projeto 2 -->
+          <article class="card">
+            <div class="card-imagem">
+              <img src="imgs/linkut.png" class="card-img-top" alt="Prévia do projeto Linkut" loading="lazy">
+              <span class="card-categoria">Aplicação web</span>
+            </div>
+
+            <div class="card-body">
+              <span class="projeto-numero">PROJETO 02</span>
+              <h3 class="card-title">Linkut - encurtador de URL</h3>
+              <p class="card-text">Aplicação web para encurtar URLs e compartilhar links de forma simples e eficiente,
+                além de gerar um QR Code para facilitar o compartilhamento.</p>
+
+              <div class="tecnologias-projeto">
+                <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+              </div>
+
+              <div class="projeto-acoes">
+                <a href="https://briciodev.github.io/Linkut/" class="btn-projeto" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Ver projeto
+                </a>
+                <a href="https://github.com/briciodev/Linkut" class="btn-projeto btn-projeto-secundario" target="_blank" rel="noopener noreferrer"
+                  aria-label="Ver código-fonte da Calculadora JS">
+                  <i class="fab fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="card">
+            <div class="card-imagem">
+              <img src="imgs/calc.png" class="card-img-top" alt="Prévia da calculadora" loading="lazy">
+              <span class="card-categoria">Desenvolvimento web</span>
+            </div>
+
+            <div class="card-body">
+              <span class="projeto-numero">PROJETO 03</span>
+              <h3 class="card-title">Calculadora JS</h3>
+              <p class="card-text">Calculadora interativa desenvolvida para realizar operações matemáticas com uma
+                interface simples e intuitiva, com opção de mudança de temas escuro/claro</p>
+
+              <div class="tecnologias-projeto">
+                <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+                <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+              </div>
+
+              <div class="projeto-acoes">
+                <a href="https://briciodev.github.io/html-css/demo/calculadora/calc.html" class="btn-projeto"
+                  target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Ver projeto
+                </a>
+                <a href="#" class="btn-projeto btn-projeto-secundario" target="_blank" rel="noopener noreferrer"
+                  aria-label="Ver código-fonte do segundo projeto">
+                  <i class="fab fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 4 -->
+          <article class="card">
+            <div class="card-imagem">
+              <img src="imgs/wip.png" class="card-img-top" alt="Prévia do terceiro projeto" loading="lazy">
+              <span class="card-categoria">Desenvolvimento web</span>
+            </div>
+
+            <div class="card-body">
+              <span class="projeto-numero">PROJETO 04</span>
+              <h3 class="card-title">Projeto em desenvolvimento</h3>
+              <p class="card-text">projeto ainda em desenvolvimento, work in progress.</p>
+
+              <div class="tecnologias-projeto">
+                <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+              </div>
+
+              <div class="projeto-acoes">
+                <a href="https://briciodev.github.io/html-css/demo/url-shortener/" class="btn-projeto" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i> Ver projeto
+                </a>
+                <a href="#" class="btn-projeto btn-projeto-secundario" target="_blank" rel="noopener noreferrer"
+                  aria-label="Ver código-fonte do terceiro projeto">
+                  <i class="fab fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contato -->
+
+    <section id="contato">
+      <div class="secao-cabecalho">
+        <span class="secao-etiqueta">VAMOS CONVERSAR?</span>
+        <h2 class="titulo">Entre em <span>contato</span></h2>
+        <p>Tem uma ideia, um projeto ou uma oportunidade? Ficarei feliz em conversar com você.</p>
+      </div>
+
+      <div class="interface-contato">
+        <div class="contato-intro">
+          <div class="contato-icone-principal">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <h3>Vamos criar algo incrível?</h3>
+          <p>Estou aberto a conhecer novos projetos, trocar experiências e explorar oportunidades na área de tecnologia.
+          </p>
+
+          <a href="mailto:fabriciotrabalho100@gmail.com" class="contato-cta">
+            Envie uma mensagem <i class="fas fa-arrow-right"></i>
+          </a>
+
+          <div class="contato-disponibilidade">
+            <span class="status-ponto"></span>
+            Aberto a novas oportunidades
+          </div>
+        </div>
+
+        <div class="contato-detalhes">
+          <h3>Me encontre por aqui</h3>
+          <p class="contato-subtexto">Escolha um dos canais abaixo para falar comigo.</p>
+
+          <a href="mailto:fabriciotrabalho100@gmail.com" class="contato-link">
+            <span class="contato-icon-box email-icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="contato-link-texto">
+              <small>E-mail</small>
+              <strong>fabriciotrabalho100@gmail.com</strong>
+            </span>
+            <i class="fas fa-arrow-up-right-from-square contato-seta"></i>
+          </a>
+
+          <a href="https://www.instagram.com/fab_code0/" target="_blank" rel="noopener noreferrer" class="contato-link">
+            <span class="contato-icon-box instagram-icon">
+              <i class="fab fa-instagram"></i>
+            </span>
+            <span class="contato-link-texto">
+              <small>Instagram</small>
+              <strong>@fab_code0</strong>
+            </span>
+            <i class="fas fa-arrow-up-right-from-square contato-seta"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/fabr%C3%ADcio-santos-3a468a229/" target="_blank"
+            rel="noopener noreferrer" class="contato-link">
+            <span class="contato-icon-box linkedin-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </span>
+            <span class="contato-link-texto">
+              <small>LinkedIn</small>
+              <strong>Meu perfil profissional</strong>
+            </span>
+            <i class="fas fa-arrow-up-right-from-square contato-seta"></i>
+          </a>
+
+          <a href="https://github.com/briciodev" target="_blank" rel="noopener noreferrer" class="contato-link">
+            <span class="contato-icon-box github-icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span class="contato-link-texto">
+              <small>GitHub</small>
+              <strong>briciodev</strong>
+            </span>
+            <i class="fas fa-arrow-up-right-from-square contato-seta"></i>
+          </a>
+
+          <div class="contato-localizacao">
+            <i class="fas fa-location-dot"></i>
+            <span>Fortaleza, Ceará — Brasil</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
-  <button id="btn-topo" class="btn-topo">Voltar ao Topo</button>
+
+  <footer>
+    <a href="#topo-site" class="footer-logo" aria-label="Voltar ao início">
+
+    </a>
+    <p>Portfólio idealizado e desenvolvido inteiramente por mim.</p>
+    <p>Ficou interessado? Entre em contato pelo e-mail ou Instagram.</p>
+    <div class="redes-sociais">
+      <a href="https://www.linkedin.com/in/fabr%C3%ADcio-santos-3a468a229/" target="_blank" rel="noopener noreferrer"
+        class="icon" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://github.com/briciodev" target="_blank" rel="noopener noreferrer" class="icon"
+        aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/fab_code0/" target="_blank" rel="noopener noreferrer" class="icon"
+        aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+    </div>
+    <p class="copyright">© <span id="ano-atual">2026</span> Fabrício Santos. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="btn-topo" class="btn-topo" type="button" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 </body>
 
 </html>
