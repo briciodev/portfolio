@@ -271,16 +271,17 @@ header {
     border-left: 1px solid var(--cor-borda);
     background: #0e1116;
     box-shadow: -15px 0 45px rgba(0, 0, 0, 0.35);
-    transform: translateX(105%);
+    transform: none;
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition:
-        transform 0.35s ease,
-        visibility 0.35s ease;
+        opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .menu-mobile.abrir-menu {
-    transform: translateX(0);
+    transform: none;
+    opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
@@ -779,7 +780,7 @@ body.menu-aberto {
 
 .selo-foto {
     position: absolute;
-    right: -12px;
+    right: -0px;
     bottom: 35px;
     display: flex;
     align-items: center;
@@ -1398,19 +1399,28 @@ footer .redes-sociais .icon:hover i {
     color: white;
 }
 
-/* ===== BOTÃO VOLTAR AO TOPO ===== */
+
+/* BOTÃO VOLTAR AO TOPO */
 .btn-topo {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 15px;
+    bottom: 15px;
     z-index: 900;
-    padding: 11px 15px;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
     border: 1px solid #ffffff26;
-    border-radius: 9px;
+    border-radius: 50%;
     background: var(--cor-principal);
     box-shadow: 0 5px 20px #b86cff38;
     color: white;
-    font: 600 .85rem "Chakra Petch", serif;
+
     cursor: pointer;
     transition: .3s;
 }
@@ -1420,13 +1430,19 @@ footer .redes-sociais .icon:hover i {
     background: rgb(132, 0, 255);
 }
 
+@media (max-width: 600px) {
+    .btn-topo {
+        right: 15px;
+        bottom: calc(15px + env(safe-area-inset-bottom));
+    }
+}
+
 /* ===== AJUSTES FINAIS ===== */
 @media (max-width: 600px) {
     footer { margin-top: 15px; padding: 35px 6% 20px; }
     footer > p { font-size: .82rem; }
     footer > p:last-child { margin-top: 20px; padding-top: 16px; }
     footer .redes-sociais .icon i { width: 40px; height: 40px; font-size: 1.05rem; }
-    .btn-topo { right: 15px; bottom: 15px; padding: 10px 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1613,4 +1629,28 @@ footer .redes-sociais .icon:hover i {
     .sobre-intro h3 {
         font-size: 1.25rem;
     }
+}
+
+
+
+
+
+
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: clip;
+}
+
+.interface-topo,
+.interface-header,
+.interface-skills,
+.interface-sobre,
+.interface-contato,
+.interface-proj {
+    min-width: 0;
 }
